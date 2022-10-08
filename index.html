@@ -63,8 +63,8 @@
     <section>
         <form action="test.php" method="POST">
 
-        <p>Usuário: <input type="text" name="usuario" id="user"></p>
-        <p>Senha: <input type="password" name="senha" id="password"></p>
+        <p>Usuário: <input type="text" name="usuario" id="user" required></p>
+        <p>Senha: <input type="password" name="senha" id="password" required></p>
 
         <button type="submit" name="acao" id="login">Enviar</button>
         <button id="clear">Cancelar</button>
@@ -80,30 +80,6 @@
     
 </form>
 
-
-   <script>
-
-        let limpar = document.querySelector("#clear");
-
-        limpar.addEventListener("click", function(){
-            let user = document.querySelector("#user").value = '';
-            let password = document.querySelector("#password"). value = '';
-            
-        });
-
-        let upload = document.querySelector('#login');
-        let user = document.querySelector("#user");
-        let password = document.querySelector("#password");
-
-        upload.addEventListener("click", function(){
-            if(user.value == 0 || password.value == 0){
-                alert('[ERRO] É necessário preencher todos os campos');
-
-            } //else{
-             //window.location = 'indexPOST.html'};
-        })
-
-    </script>
 
 </body>
 </html>
