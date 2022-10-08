@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+        body{
+            background-color: rgb(255, 255, 255);
+            font: normal 13pt Lato;
+            font-weight: bold;
+            position: relative;
+
+        }
+
+      
+        section{
+            margin: auto;
+            text-align: center;
+            background-color: black;
+            color: rgb(169, 115, 219);
+            width: 500px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 3px 1px 5px 5px rgba(0, 0, 0, 0.443);
+            margin-top: 50px;
+        }
+
+        button{
+            background-color: rgb(161, 102, 217);
+            border-radius: 10px;
+            padding: 6px;
+
+        }
+
+        #user{
+            margin-right: 11px;
+        }
+
+        input{
+            border-color: rgb(169, 112, 223);
+        }
+
+        footer{
+            text-align: center;
+            margin-top: 190px;
+        }
+
+    </style>
+        
+
+</head>
+<body>
+        
+    <header>
+        <img src="foto.jpg" alt="">
+    </header>
+    
+
+    <section>
+        <form action="test.php" method="POST">
+
+        <p>Usuário: <input type="text" name="usuario" id="user"></p>
+        <p>Senha: <input type="password" name="senha" id="password"></p>
+
+        <button type="submit" name="acao" id="login">Enviar</button>
+        <button id="clear">Cancelar</button>
+
+    </form>
+        
+
+    </section>
+
+    <footer>
+        <p>&copy;Rodrigues, Bianca 2022</p>
+    </footer>
+    
+</form>
+
+
+   <script>
+
+        let limpar = document.querySelector("#clear");
+
+        limpar.addEventListener("click", function(){
+            let user = document.querySelector("#user").value = '';
+            let password = document.querySelector("#password"). value = '';
+            
+        });
+
+        let upload = document.querySelector('#login');
+        let user = document.querySelector("#user");
+        let password = document.querySelector("#password");
+
+        upload.addEventListener("click", function(){
+            if(user.value == 0 || password.value == 0){
+                alert('[ERRO] É necessário preencher todos os campos');
+
+            } //else{
+             //window.location = 'indexPOST.html'};
+        })
+
+    </script>
+
+</body>
+</html>
+
+
